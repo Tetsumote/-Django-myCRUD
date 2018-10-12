@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="wraper">
+    <h1>Task</h1> <a href="{% url "book_new" %}" class="new">New</a>
+
+    <ul class="task">
+
+        {% for book in object_list %}
+
+
+        <li class="taskItem">
+            <a href="{% url "book_view" book.id %}" class="titleTask">{{ book.title }}</a>
+
+
+            <a href="{% url "book_edit" book.id %}" class="edit">edit</a>
+            <a href="{% url "book_delete" book.id %}" class="delete">delete</a>
+
+        </li>
+
+
+        {% endfor %}
+
+    </ul>
+
+</div>
+
+
+
+{% endblock content %}

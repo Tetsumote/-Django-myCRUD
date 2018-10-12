@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="wraper">
+
+    <h1>Book Details</h1><a href="{% url "book_list" %}" class="back">Back</a>
+    <div class="detail">
+
+        <h3> {{object.title}}</h3>
+        <p> {{ object.text }}</p>
+
+    </div>
+
+
+</div>
+
+{% endblock content %}
